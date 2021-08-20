@@ -13,10 +13,11 @@
 
     // $active_group = 'default';
     // $query_builder = TRUE
-
+    // this is for heroku
     $con = mysqli_connect($server,$username,$password, $db) or die("Couln't connect to the database: ".mysqli_connect_error());
 
-    $con = mysqli_connect("localhost", "root", "", "zuridb") or die("Couln't connect to the database: ".mysqli_connect_error());
+    //Uncomment this code if you use the local dabatase
+    // $con = mysqli_connect("localhost", "root", "", "zuridb") or die("Couln't connect to the database: ".mysqli_connect_error());
 
     $errors = [];
 
