@@ -48,30 +48,41 @@
     </div>
 </section>
 
-
-<section class="video-sec-area pb-100 pt-40" id="about">
-    <div class="container">
-        <div class="row justify-content-start align-items-center">
-            <div class="col-lg-6 video-right justify-content-center align-items-center d-flex">
-                <div class="overlay overlay-bg"></div>
-            </div>
-            <div class="col-lg-6 video-left">
-                <h6>IDENTITY</h6>
-                <h1>IRAGI KAHUMUZA Pierre</h1>
-                <h1>Display: Peter</h1>
-                <p><span>Short Description</span></p>
-                <p>
-                    Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod temp or incididunt ut
-                    labore et
-                    dolore magna aliqua. Ut enim ad minim.
-                </p>
-                <img class="img-fluid" src="img/signature.png" alt="signature"> <br>
-                <a href="#" class="primary-btn text-uppercase">Contact Me</a>
-            </div>
-        </div>
-    </div>
-</section>
-
+<?php 
+    $q = "SELECT * FROM zuri_table";
+    mysqli_set_charset($con, 'utf8');
+    $result = mysqli_query($con, $q);
+    if($result){
+        while( $row = mysqli_fetch_array($result, MYSQLI_ASSOC)){
+        echo'<section class="video-sec-area pb-100 pt-40" id="about">
+                <div class="container">
+                    <div class="row justify-content-start align-items-center">
+                        <div class="col-lg-6 video-right justify-content-center align-items-center d-flex">
+                            <div class="overlay overlay-bg"></div>
+                        </div>
+                        <div class="col-lg-6 video-left">
+                            <h6>IDENTITY</h6>
+                            <h1>'.$row['fullName'].'</h1>
+                            <h1>Display Name: '.$row['displayName'].'</h1>
+                            <p><span>Short Description</span></p>
+                            <p>
+                                Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod temp or incididunt ut
+                                labore et
+                                dolore magna aliqua. Ut enim ad minim.
+                            </p>
+                            <img class="img-fluid" src="img/signature.png" alt="signature"> <br>
+                            <a href="shortContact.php" class="primary-btn text-uppercase">Contact Me</a>
+                        </div>
+                    </div>
+                </div>
+            </section>';
+        }
+        mysqli_free_result($result);
+    }else{
+        echo'<p> The current user can not be retrieved</p>';
+        echo'<p>'.mysqli_error($con).'</p>';
+    }
+?>
 
 <section class="menu-area section-gap" id="coffee">
     <div class="container">
