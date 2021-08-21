@@ -62,8 +62,8 @@
                         </div>
                         <div class="col-lg-6 video-left">
                             <h6>IDENTITY</h6>
-                            <h1>'.$row['fullName'].'</h1>
-                            <h1>Display Name: '.$row['displayName'].'</h1>
+                            <h1>IRAGI KAHUMUZA Pierre</h1>
+                            <h1>Display Name: Peter</h1>
                             <p><span>Short Description</span></p>
                             <p>
                                 Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod temp or incididunt ut
