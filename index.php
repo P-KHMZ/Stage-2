@@ -7,10 +7,10 @@
                 <div class="col-lg-8 col-sm-4 col-8 header-top-right no-padding">
                     <ul>
                         <li>
-                            <a href="<?= $numero; ?>">Phone-line: <?= $numero; ?></a>
+                            <a href="">Phone-line: (+243) 991-163-777</a>
                         </li>
                         <li><a href="#">|</a></li>
-                        <li><a href="<?=$email; ?>">Email: <?= $email;?></a></li>
+                        <li><a href="#">Email: pierrekahumuza@gmail.com</a></li>
                     </ul>
                 </div>
             </div>
@@ -49,11 +49,11 @@
 </section>
 
 <?php 
-    $q = "SELECT * FROM zuri_table";
-    mysqli_set_charset($con, 'utf8');
-    $result = mysqli_query($con, $q);
-    if($result){
-        while( $row = mysqli_fetch_array($result, MYSQLI_ASSOC)){
+    // $q = "SELECT * FROM zuri_table";
+    // mysqli_set_charset($con, 'utf8');
+    // $result = mysqli_query($con, $q);
+    // if($result){
+    //     while( $row = mysqli_fetch_array($result, MYSQLI_ASSOC)){
         echo'<section class="video-sec-area pb-100 pt-40" id="about">
                 <div class="container">
                     <div class="row justify-content-start align-items-center">
@@ -76,12 +76,12 @@
                     </div>
                 </div>
             </section>';
-        }
-        mysqli_free_result($result);
-    }else{
-        echo'<p> The current user can not be retrieved</p>';
-        echo'<p>'.mysqli_error($con).'</p>';
-    }
+    //     }
+    //     mysqli_free_result($result);
+    // }else{
+    //     echo'<p> The current user can not be retrieved</p>';
+    //     echo'<p>'.mysqli_error($con).'</p>';
+    // }
 ?>
 
 <section class="menu-area section-gap" id="coffee">
